@@ -1,2 +1,2 @@
 # sample-microservice-loja
-Code developed during Microservices Topic of Software Architecture Course.
+Code developed during Microservices Topic Class of Software Architecture Course.
