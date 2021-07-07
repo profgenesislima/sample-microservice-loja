@@ -1,0 +1,16 @@
+ spring:
+  cloud:
+    gateway:
+      routes:
+      - id: estoque-service
+        uri: http://localhost:8082/estoque/
+        predicates:
+        - Path=/estoque/**        
+      - id: admin-service
+        uri: http://localhost:7777/admin/
+        predicates:
+        - Path=/admin/**
+      - id: loja-service
+        uri: http://localhost:9000/loja/
+        predicates:
+        - Path=/loja/**
