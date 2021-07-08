@@ -59,7 +59,6 @@ public class PedidoService {
     	
     	String produtoEstoqueJson = this.restTemplate.getForObject("http://ESTOQUE-SERVICE/estoque/api/inventario/"+1, String.class);
     	
-    	System.out.println("PRODUTO ESTOQUE JSON "+produtoEstoqueJson);
     	 try {
 			 map = mapper.readValue(produtoEstoqueJson,PedidoFormDTO.class);
 			

@@ -6,7 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-
+//Data Transfer Object
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor

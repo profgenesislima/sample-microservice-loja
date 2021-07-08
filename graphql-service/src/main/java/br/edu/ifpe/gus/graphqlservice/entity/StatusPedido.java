@@ -1,7 +1,6 @@
-package br.edu.ifpe.gus.loja.lojaservice.entity;
+package br.edu.ifpe.gus.graphqlservice.entity;
 
-import br.edu.ifpe.gus.loja.lojaservice.exceptions.DomainException;
-
+import br.edu.ifpe.gus.graphqlservice.exceptions.DomainException;
 
 public enum StatusPedido {
 
@@ -16,7 +15,7 @@ public enum StatusPedido {
 		@Override
 		public StatusPedido anterior() throws DomainException {
 			
-		 throw new DomainException("N„o h· etapa anterior.");
+		 throw new DomainException("N√£o h√° etapa anterior.");
 		}
 	}, SEPARACAO {
 		@Override
@@ -81,7 +80,7 @@ public enum StatusPedido {
 		@Override
 		public StatusPedido proximo() throws DomainException {
 			
-			throw new DomainException("Etapa: Pedido Finalizado. N„o h· etapa posterior.");
+			throw new DomainException("Etapa: Pedido Finalizado. N√£o h√° etapa posterior.");
 		}
 
 		@Override
@@ -109,3 +108,4 @@ public enum StatusPedido {
 	public abstract StatusPedido anterior() throws DomainException;
 	
 }
+

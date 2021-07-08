@@ -1,0 +1,40 @@
+type Pedido {
+    id: ID!
+    title: String!
+    content: String!
+    status: StatusPedido!
+}
+
+
+enum StatusPedido {
+   EM_ANALISE
+   SEPARACAO
+   ENVIADO
+   SAIU_ENTREGA
+   RETORNADO
+   ENTREGUE
+   FINALIZADO
+   CANCELADO
+}
+
+input PostInputRequest {
+    title: String!
+    content: String!
+    authorId: Int!
+}
+
+input AuthorInputRequest {
+    name: String!
+    age: Int
+}
+
+type Mutation {
+    newPost(input: PostInputRequest): Post!
+    newAuthor(input: AuthorInputRequest): Author!
+}
+
+type Query {
+    recentPosts(limit: Int, offset: Int, orderBy: String): [Post]
+    authorsWithTopPosts: [Author]
+}
+
